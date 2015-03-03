@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "binding_of_caller"
 gem 'awesome_print', '~> 1.6.1'
+gem 'bootstrap-sass', '~> 3.3.3'
 
 group :production do 
   gem 'pg'
