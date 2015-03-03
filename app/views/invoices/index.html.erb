@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Invoices</h1>
+<div class="row">
+  <h1>Listing Invoices</h1>
+  <div class="pull-right range-query">
+    <%= form_tag invoices_path, method: :get do %>
+      <%= text_field_tag 'search[date_from]', @search.date_from %>
+      <%= text_field_tag 'search[date_to]', @search.date_to %>
+      <%= submit_tag 'Search', class: "btn btn-sm search-button" %>
+    <% end %>
+  </div>
+</div>
 
 <div class="media">
   <div class="media-body">
@@ -24,7 +33,7 @@
             <td><%= invoice.sales_person %></td>
             <td><%= link_to 'Show', invoice, class: "btn btn-sm btn-default" %></td>
             <td><%= link_to 'Edit', edit_invoice_path(invoice), class: "btn btn-sm btn-default" %></td>
-            <td><%= link_to 'Destroy', invoice, method: :delete, class: "btn btn-sm btn-default", data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Delete', invoice, method: :delete, class: "btn btn-sm btn-default", data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
