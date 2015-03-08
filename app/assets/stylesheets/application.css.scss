@@ -15,3 +15,24 @@
  */
 
 @import 'bootstrap';
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+  margin-top: 20px;
+}
+
+.alert-alert {
+  background-color: #FF7C7C;
+  border-color: #FA6161;
+  color: #FFDCDC;
+  margin-top: 20px;
+}
+
+.alert-error {
+  background-color: #FF7C7C;
+  border-color: #FA6161;
+  color: #FFDCDC;
+  margin-top: 20px;
+}
